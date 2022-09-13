@@ -12,3 +12,9 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext{
+    minSdkVersion = 26 //okhttp3,4.x仅支持5.0以上app
+    targetSdkVersion = 32 //这个设置仅仅是一个声明，没有实质的作用，程序运行时如果目标设备的API版本刚好等于此数值，则不必为此程序开启兼容性检查判断，运行效率更高
+    compileSdkVersion = 32 //使用哪个版本的API进行编译
+}
