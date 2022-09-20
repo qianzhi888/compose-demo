@@ -16,6 +16,8 @@ data class HttpResult<T>(
      * 是否请求成功
      */
     fun isSuccess(): Boolean = errorCode == SUCCESS_CODE
+
+    fun getCode(): Int = errorCode
     companion object{
         const val SUCCESS_CODE = 0
     }
